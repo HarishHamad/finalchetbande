@@ -1,0 +1,78 @@
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  animation: twinklingCard 5s infinite alternate; /* Add twinkling animation to the whole card */
+}
+
+.user-card:hover {
+  background-color: #f0f0f0;
+  animation: none; /* Remove animation on hover */
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-title {
+  margin-bottom: 0;
+  color: green;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 8px;
+  color: green;
+}
+
+.card-subtitle {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  animation: twinklingText 1.5s infinite alternate; /* Faster twinkling animation */
+}
+
+.card-date {
+  margin: 0;
+  font-size: 0.9rem;
+  animation: twinklingText 2s infinite alternate; /* Faster twinkling animation */
+}
+
+@keyframes twinklingText {
+  from {
+    color: rgb(230, 183, 12); /* Starting color */
+  }
+  to {
+    color: #339e19; /* Twinkling color */
+  }
+}
+
+@keyframes twinklingCard {
+  from {
+    background-color: #f0f0f0; /* Starting color */
+  }
+  to {
+    background-color: #ba8f0e99; /* Twinkling color */
+  }
+}
+
+.user-details {
+  margin-top: 1rem;
+}
+
+.user-details p {
+  margin: 0;
+}
+
+.ant-avatar {
+  background-color: #1890ff;
+}
+
+.ant-avatar-icon {
+  color: #fff;
+}
